@@ -34,9 +34,10 @@ const questions = [
     type: "input",
   },
   {
-    message: "What is the project's License?",
+    message: "Please select the License for your project?",
     name: "license",
-    type: "input",
+    type: "list",
+    choices: ['MIT', 'GNU GPLv3']
   },
   {
     message: "Provide examples on how to run the project:",
