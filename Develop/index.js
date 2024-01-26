@@ -13,11 +13,11 @@ const questions = [
     name: "description",
     type: "input",
   },
-  {
-    message: "Provide Table of Contents if Applicable:",
-    name: "table",
-    type: "input",
-  },
+//   {
+//     message: "Provide Table of Contents if Applicable:",
+//     name: "table",
+//     type: "input",
+//   },
   {
     message: "What are the steps required to install your project?",
     name: "installation",
@@ -54,7 +54,6 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-
 const fs = require("fs");
 //const { default: inquirer } = require("inquirer");
 function writeToFile(fileName, data) {
@@ -68,7 +67,13 @@ function askQuestions(){
         const markdown = generateMarkdown(answers);
         writeToFile('readMe.md',markdown);
         console.log(markdown);
-    })
+        
+        let license = answers.license;
+        const badge = renderLicenseBadge(license);
+        console.log(badge);
+        const licenseLink = renderLicenseLink(license);
+        console.log(licenseLink);
+        })
 }
 // TODO: Create a function to initialize app
 function init() {

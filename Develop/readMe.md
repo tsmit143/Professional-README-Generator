@@ -4,13 +4,16 @@
 p
 
 ## Table of Contents
-p
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
 ## Installation
 p
 
 ## Usage
-p
+undefined
 
 ## License
 MIT

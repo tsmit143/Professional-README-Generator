@@ -2,9 +2,9 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license === "MIT"){
-        return 'https://img.shields.io/badge/License-MIT-red'
+        return 'mit' //'https://img.shields.io/badge/License-MIT-red'
     } else if (license === 'GNU GPLv3'){
-        return 'https://img.shields.io/badge/License-GNU-green'
+        return 'gnu' //'https://img.shields.io/badge/License-GNU-green'
     } else {return ''};
 }
 
@@ -12,9 +12,9 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
     if (license === "MIT"){
-        return 'https://choosealicense.com/licenses/mit/#'
+        return 'mit lic' //'https://choosealicense.com/licenses/mit/#'
     } else if (license === 'GNU GPLv3'){
-        return 'https://choosealicense.com/licenses/gpl-3.0/'
+        return 'gnu lic' //'https://choosealicense.com/licenses/gpl-3.0/'
     } else {return ''};
 }
 
@@ -32,7 +32,10 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Table of Contents
-${data.table}
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
 ## Installation
 ${data.installation}
@@ -56,4 +59,6 @@ ${data.questions}
 }
 
 module.exports = generateMarkdown;
+// module.exports = renderLicenseLink;
+// module.exports = renderLicenseBadge;
 
